@@ -1,16 +1,24 @@
 import React from "react";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard.js";
 import "./ExperienceAccordion.css";
-import { Accordion, Panel } from "baseui/accordion";
+import { StatelessAccordion, Panel } from "baseui/accordion";
 import { DarkTheme, LightTheme, ThemeProvider } from "baseui";
+import { useState } from "react";
 
 function ExperienceAccordion(props) {
   const theme = props.theme;
+  const [expanded, setExpanded] = useState(["Ervaring"]);
 
   return (
     <div className="experience-accord">
       <ThemeProvider theme={theme.name === "light" ? LightTheme : DarkTheme}>
-        <Accordion onChange={({ expanded }) => console.log(expanded)}>
+        <StatelessAccordion
+          expanded={expanded}
+          onChange={({ key, expanded }) => {
+            console.log(key, expanded);
+            setExpanded(expanded);
+          }}
+        >
           {props.sections.map((section) => {
             return (
               <Panel
@@ -26,7 +34,7 @@ function ExperienceAccordion(props) {
               </Panel>
             );
           })}
-        </Accordion>
+        </StatelessAccordion>
       </ThemeProvider>
     </div>
   );

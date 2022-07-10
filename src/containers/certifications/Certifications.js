@@ -11,7 +11,7 @@ function Certifications(props) {
       <div className="certs-header-div">
         <Fade bottom duration={2000} distance="20px">
           <h1 className="certs-header" style={{ color: theme.text }}>
-            Certifications
+            Certificaten
           </h1>
         </Fade>
       </div>

@@ -6,15 +6,18 @@
 }
 
 .greet-main {
-  max-width: 1370px;
+  /* width: 100vw; */
+  /* max-width: 1370px; */
   padding: 10px 10px;
   margin: 0px auto;
   margin-top: 2rem;
-  display: block;
+  display: flex;
 }
 
 .greeting-main {
   display: flex;
+  padding-left: 10vw;
+  padding-right: 10vw;
   /* text-align: center; */
 }
 
