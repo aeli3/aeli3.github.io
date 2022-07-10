@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "personalPortfolio",
-  "homepage": "https://aeli3.github.io/",
+  "homepage": "https://aeli3.github.io/aeli3.github.io",
   "version": "1.0.0",
   "scripts": {
     "build": "react-scripts build",
